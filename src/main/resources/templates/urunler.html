@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+		<table>
+			<th:block th:each="urun : ${urunlist}">
+			      <tr>
+			        <th>URUN</th>
+			        <th>ACİKLAMA</th>
+			        <th>PRICE</th>
+			        <th>SATAN</th>
+			      </tr>
+			      <tr>
+			        <td th:text="${urun.urunadi}">Onions</td>
+			        <td th:text="${urun.aciklama}">Mis Gibi Mis</td>
+			        <td th:text="${urun.fiyat}">59</td>
+			        <td th:text="${urun.satanid}">Hasan Cerit</td>
+			      </tr>
+			      <tr>
+			      	<td><a th:href="@{/urunal(id=${urun.id})}"> Ürün Sat </a></td>
+			      </tr>
+		     </th:block >
+	    </table>
+</body>
+</html>

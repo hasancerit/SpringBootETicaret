@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 th:text="'Hosgeldin ' + ${cUser.ad}"></h1>
+	
+	<br>
+	<a th:href="@{/urunsat}"> Ürün Sat </a>
+	<br>
+	<a th:href="@{/urunler}"> Ürün Al </a>
+	<br>
+	<a th:href="@{/cikis}"> Çıkış </a>
+</body>
+</html>
